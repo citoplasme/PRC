@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <keyname>PRC_TPC1</keyname>
+        <title>Ontologia para uma Lista de Alunos</title>
+        <subtitle>TP1 da UC PRC do perfil de PLC 2019/2020</subtitle>
+        <bdate>2020-02-03</bdate>
+        <edate>2020-02-09</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+            <email>jcr@di.uminho.pt</email>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>João Pedro Torres Pimentel</name>
+            <identifier>A80874</identifier>
+            <email>a80874@alunos.uminho.pt</email>
+            <photo path="me.jpeg"/>
+        </member>
+    </workteam>
+    <abstract>
+        
+        <p>
+            Este trabalho semanal baseia-se na utilização de uma ontologia definida no decorrer da aula prática, em que se adicionam duas <b>UCs</b>(PRI e GCS), bem como os alunos existentes numa folha de cálculo <i>excel</i>. 
+        </p>
+        
+        <p>
+            O primeiro passo foi retirar a informação da folha de cálculo. Visto que esta se encontrava <i>online</i>, foi efetuado o <i>download</i> da mesma em formato <b>csv</b>, sendo aplicado um <i>script Python</i> que a cada entrada do ficheiro iria retirar o valor do nome e identificador, valores dos quais é possível gerar o <i>email</i>. Era, ainda, necessário encontrar um valor para o curso e para a unidade curricular em questão. Assim, foi definido que todos os alunos pertenciam ao curso <b>MIEI</b> e que as linhas pares seriam da UC PRI e os restantes de GCS.
+        </p>
+        
+        <p>
+            Tendo o documento <b>XML</b> com a informação necessária, apenas foi necessário aplicar uma transformação por <b>XSLT</b>, em que se transformava cada aluno numa entidade da ontologia. Note-se que como apenas são geradas as entidades nesta transformação, foi necessário concatenar o conteúdo obtido à ontologia inicial. 
+        </p>
+        
+        <p>
+            Por fim, para testar a resolução efetuada, a ontologia foi carregada para um projeto de <b>GraphDB</b>, sendo que todos os registos se encontravam representados como pretendido.
+        </p>
+
+        
+        
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/citoplasme/PRC/tree/master/TPC1">Github</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC1/src">Resolução</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC1/src/ontologia.xml">XML</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC1/src/ontologia.ttl">Entidades</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC1/src/final.ttl">TTL</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRc/blob/master/TPC1/PR/pr.html">Project Record HTML</deliverable>
+    </deliverables>
+</pr>
+
+

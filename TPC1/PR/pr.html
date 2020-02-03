@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><html>
+   <head>
+      <title>
+         Project Record
+         
+      </title>
+      <meta charset="UTF-8"></meta>
+      <style>
+         * {
+         font-family: Lucida Grande;
+         }
+         
+         div {
+         box-sizing: border-box;
+         text-align: justify;
+         text-justify: inter-word;
+         }
+         
+         .column {
+         float: left;
+         width: 33.33%;
+         padding: 5px;
+         }
+         
+         .row::after {
+         content: "";
+         clear: both;
+         display: table;
+         }
+         
+         
+      </style>
+   </head>
+   <body>
+      <div style="margin:2cm">
+         
+         
+         <p align="left">PRC_TPC1
+            <span style="float:right;">
+               Universidade do Minho
+               
+            </span>
+         </p>
+         
+         <h1 align="center">Ontologia para uma Lista de Alunos</h1>
+         
+         <h3 align="center">TP1 da UC PRC do perfil de PLC 2019/2020</h3>
+         
+         <h5 align="center"> Begin Date: 
+            2020-02-03
+         </h5>
+         
+         <h5 align="center"> End Date: 
+            2020-02-09
+         </h5>
+         
+         <hr></hr>
+         <h2>
+            <b>Supervisor</b>
+         </h2>
+         
+         <p>
+            <b>Name: </b>José Carlos Ramalho
+         </p>
+         
+         <p>
+            <b>Homepage:</b>
+            <a href="http://www4.di.uminho.pt/~jcr/">http://www4.di.uminho.pt/~jcr/</a>
+         </p>
+         
+         <p>
+            <b>Email: </b>
+            <a href="mailto:jcr@di.uminho.pt">jcr@di.uminho.pt</a>
+         </p>
+         
+         
+         
+         <hr></hr>
+         <h2>Workteam</h2>
+         <div class="row">
+            
+            <div class="column">
+               
+               <p>
+                  <b>Name: </b>João Pedro Torres Pimentel
+               </p>
+               
+               <p>
+                  <b>Identifier: </b>A80874
+               </p>
+               
+               <p>
+                  <b>Email: </b>
+                  <a href="mailto:a80874@alunos.uminho.pt">a80874@alunos.uminho.pt</a>
+               </p>
+               
+               <img src="me.jpeg" alt="me.jpeg" width="250"></img>
+               
+            </div>
+            
+         </div>
+         
+         <hr></hr>
+         <h2>Abstract</h2>
+         <div>
+            
+            
+            <p>
+               Este trabalho semanal baseia-se na utilização de uma ontologia definida no decorrer
+               da aula prática, em que se adicionam duas 
+               <b>UCs</b>(PRI e GCS), bem como os alunos existentes numa folha de cálculo 
+               <i>excel</i>. 
+               
+            </p>
+            
+            
+            <p>
+               O primeiro passo foi retirar a informação da folha de cálculo. Visto que esta se encontrava
+               
+               <i>online</i>, foi efetuado o 
+               <i>download</i> da mesma em formato 
+               <b>csv</b>, sendo aplicado um 
+               <i>script Python</i> que a cada entrada do ficheiro iria retirar o valor do nome e identificador, valores
+               dos quais é possível gerar o 
+               <i>email</i>. Era, ainda, necessário encontrar um valor para o curso e para a unidade curricular
+               em questão. Assim, foi definido que todos os alunos pertenciam ao curso 
+               <b>MIEI</b> e que as linhas pares seriam da UC PRI e os restantes de GCS.
+               
+            </p>
+            
+            
+            <p>
+               Tendo o documento 
+               <b>XML</b> com a informação necessária, apenas foi necessário aplicar uma transformação por
+               
+               <b>XSLT</b>, em que se transformava cada aluno numa entidade da ontologia. Note-se que como apenas
+               são geradas as entidades nesta transformação, foi necessário concatenar o conteúdo
+               obtido à ontologia inicial. 
+               
+            </p>
+            
+            
+            <p>
+               Por fim, para testar a resolução efetuada, a ontologia foi carregada para um projeto
+               de 
+               <b>GraphDB</b>, sendo que todos os registos se encontravam representados como pretendido.
+               
+            </p>
+            
+            
+            
+            
+         </div>
+         
+         <hr></hr>
+         <h2>Deliverables</h2>
+         <ol>
+            
+            <li>
+               <a href="https://github.com/citoplasme/PRC/tree/master/TPC1">Github</a>
+            </li>
+            
+            <li>
+               <a href="https://github.com/citoplasme/PRC/blob/master/TPC1/src">Resolução</a>
+            </li>
+            
+            <li>
+               <a href="https://github.com/citoplasme/PRC/blob/master/TPC1/src/ontologia.xml">XML</a>
+            </li>
+            
+            <li>
+               <a href="https://github.com/citoplasme/PRC/blob/master/TPC1/src/ontologia.ttl">Entidades</a>
+            </li>
+            
+            <li>
+               <a href="https://github.com/citoplasme/PRC/blob/master/TPC1/src/final.ttl">TTL</a>
+            </li>
+            
+            <li>
+               <a href="https://github.com/citoplasme/PRc/blob/master/TPC1/PR/pr.html">Project Record HTML</a>
+            </li>
+            
+         </ol>
+         
+      </div>
+      <hr></hr>
+      <p align="center">03/02/2020</p>
+   </body>
+</html>
