@@ -47,6 +47,7 @@
         <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC1/src/ontologia.xml">XML</deliverable>
         <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC1/src/ontologia.ttl">Entidades</deliverable>
         <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC1/src/final.ttl">TTL</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC1/src/infered.ttl">Após Reasoner</deliverable>
         <deliverable path="https://github.com/citoplasme/PRc/blob/master/TPC1/PR/pr.html">Project Record HTML</deliverable>
     </deliverables>
 </pr>
