@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <keyname>PRC_TPC2</keyname>
+        <title>Ontologia para um Arquivo Musical</title>
+        <subtitle>TP2 da UC PRC do perfil de PLC 2019/2020</subtitle>
+        <bdate>2020-02-10</bdate>
+        <edate>2020-02-16</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+            <email>jcr@di.uminho.pt</email>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>João Pedro Torres Pimentel</name>
+            <identifier>A80874</identifier>
+            <email>a80874@alunos.uminho.pt</email>
+            <photo path="me.jpeg"/>
+        </member>
+    </workteam>
+    <abstract>
+        
+        <p>
+            Este trabalho semanal baseia-se na criação de uma ontologia para um arquivo musical. 
+            Além disso, pretendia-se a aplicação de quatro <i>queries</i> <b>SPARQL</b>, de modo 
+            a permitir a resposta a algumas questões.
+        </p>
+        
+        <p>
+            O primeiro passo foi definir a ontologia de raíz, sendo que se utilizaram quatro classes: 
+            Obra, Info, Instrumento e Partitura.
+            Além destas quatro classes, foi necessário definir as relações entre elas, sendo que uma Obra é 
+            caraterizada por Info, uma Obra utiliza Instrumentos e uma Partitura define o Instrumento na obra.
+            Para fazer estes passos, foi utilizada a ferramenta <i>Protégé</i>, sendo o código utilizado para 
+            conhecer o formato a utilizar na <i>stylesheet</i> de transformação.
+        </p>
+        
+        <p>
+            Como mencionado anteriormente, a partir da aplicação de uma folha de transformação ao documento <b>XML</b>,
+            os vários elementos foram transformados no formato necessário. Assim, começou-se por aplicar a transformação 
+            às obras, tendo estas a indicação dos instrumentos que as compõe. Em seguida, foram gerados os instrumentos, 
+            num modo de <i>parse</i> diferente do das obras.
+        </p>
+        
+        <p>
+            Em seguida, para testar a resolução efetuada, a ontologia foi carregada para um projeto de 
+            <b>GraphDB</b>, sendo que todos os registos se encontravam representados como pretendido. 
+            Aqui, foi, também, possível responder às <i>queries</i> propostas, sendo que estas se 
+            encontram num ficheiro com nome <i>queries.txt</i>. As respostas encontram-se na pasta <i>answers</i>. 
+        </p>
+
+        
+        
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/citoplasme/PRC/tree/master/TPC2">Github</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC2/src">Resolução</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC2/src/ontologia.xml">XML</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC2/src/ontologia.ttl">Entidades</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC2/src/final.ttl">TTL</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC2/src/infered.ttl">Após Reasoner</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRc/blob/master/TPC2/PR/pr.html">Project Record HTML</deliverable>
+    </deliverables>
+</pr>
+
+

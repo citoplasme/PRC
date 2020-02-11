@@ -1,0 +1,27 @@
+1 - Compositores por ordem alfabetica
+PREFIX : <http://www.semanticweb.org/citoplasme/ontologies/2020/1/arquivo_musical#>
+select ?compositor where { 
+	?obra :compositor ?compositor.
+} order by asc(UCASE(str(?compositor)))
+
+2 - Titulos de obras de marchas de desfile
+PREFIX : <http://www.semanticweb.org/citoplasme/ontologies/2020/1/arquivo_musical#>
+select ?titulo where { 
+	?obra :tipo "Marcha de Desfile".
+    ?obra :titulo ?titulo .
+} 
+
+3 - Partituras por obra
+PREFIX : <http://www.semanticweb.org/citoplasme/ontologies/2020/1/arquivo_musical#>
+select ?obra ?partitura where { 
+	?obra :utiliza ?instrumento.
+    ?instrumento :é_definido ?partitura .
+} 
+
+4 - Títulos de obras com partituras para Bombo
+PREFIX : <http://www.semanticweb.org/citoplasme/ontologies/2020/1/arquivo_musical#>
+select ?titulo where { 
+	?obra :utiliza ?instrumento .
+    ?instrumento :designacao "Bombo" .
+    ?obra :titulo ?titulo .
+} 

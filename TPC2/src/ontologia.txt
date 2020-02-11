@@ -1,0 +1,26 @@
+Obra
+	- id 
+	- titulo
+	- tipo 
+	- compositor
+	- arranjo
+
+Info 
+	- video
+
+Instrumento 
+	- designacao 
+
+Partitura
+	- voz
+	- tipo 
+	- path 
+
+Info -> carateriza Obra
+Info <- é_caraterizada Obra
+
+Instrumento é_utilizado Obra
+Obra utiliza Instrumento 
+
+Partitura define Instrumento 
+Instrumento é_definido Partitura

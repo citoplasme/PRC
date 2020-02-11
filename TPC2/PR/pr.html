@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?><html>
+   <head>
+      <title>
+         Project Record
+         
+      </title>
+      <meta charset="UTF-8"></meta>
+      <style>
+         * {
+         font-family: Lucida Grande;
+         }
+         
+         div {
+         box-sizing: border-box;
+         text-align: justify;
+         text-justify: inter-word;
+         }
+         
+         .column {
+         float: left;
+         width: 33.33%;
+         padding: 5px;
+         }
+         
+         .row::after {
+         content: "";
+         clear: both;
+         display: table;
+         }
+         
+         
+      </style>
+   </head>
+   <body>
+      <div style="margin:2cm">
+         
+         
+         <p align="left">PRC_TPC2
+            <span style="float:right;">
+               Universidade do Minho
+               
+            </span>
+         </p>
+         
+         <h1 align="center">Ontologia para um Arquivo Musical</h1>
+         
+         <h3 align="center">TP2 da UC PRC do perfil de PLC 2019/2020</h3>
+         
+         <h5 align="center"> Begin Date: 
+            2020-02-10
+         </h5>
+         
+         <h5 align="center"> End Date: 
+            2020-02-16
+         </h5>
+         
+         <hr></hr>
+         <h2>
+            <b>Supervisor</b>
+         </h2>
+         
+         <p>
+            <b>Name: </b>José Carlos Ramalho
+         </p>
+         
+         <p>
+            <b>Homepage:</b>
+            <a href="http://www4.di.uminho.pt/~jcr/">http://www4.di.uminho.pt/~jcr/</a>
+         </p>
+         
+         <p>
+            <b>Email: </b>
+            <a href="mailto:jcr@di.uminho.pt">jcr@di.uminho.pt</a>
+         </p>
+         
+         
+         
+         <hr></hr>
+         <h2>Workteam</h2>
+         <div class="row">
+            
+            <div class="column">
+               
+               <p>
+                  <b>Name: </b>João Pedro Torres Pimentel
+               </p>
+               
+               <p>
+                  <b>Identifier: </b>A80874
+               </p>
+               
+               <p>
+                  <b>Email: </b>
+                  <a href="mailto:a80874@alunos.uminho.pt">a80874@alunos.uminho.pt</a>
+               </p>
+               
+               <img src="me.jpeg" alt="me.jpeg" width="250"></img>
+               
+            </div>
+            
+         </div>
+         
+         <hr></hr>
+         <h2>Abstract</h2>
+         <div>
+            
+            
+            <p>
+               Este trabalho semanal baseia-se na criação de uma ontologia para um arquivo musical.
+               
+               Além disso, pretendia-se a aplicação de quatro 
+               <i>queries</i> 
+               <b>SPARQL</b>, de modo 
+               a permitir a resposta a algumas questões.
+               
+            </p>
+            
+            
+            <p>
+               O primeiro passo foi definir a ontologia de raíz, sendo que se utilizaram quatro classes:
+               
+               Obra, Info, Instrumento e Partitura.
+               Além destas quatro classes, foi necessário definir as relações entre elas, sendo que
+               uma Obra é 
+               caraterizada por Info, uma Obra utiliza Instrumentos e uma Partitura define o Instrumento
+               na obra.
+               Para fazer estes passos, foi utilizada a ferramenta 
+               <i>Protégé</i>, sendo o código utilizado para 
+               conhecer o formato a utilizar na 
+               <i>stylesheet</i> de transformação.
+               
+            </p>
+            
+            
+            <p>
+               Como mencionado anteriormente, a partir da aplicação de uma folha de transformação
+               ao documento 
+               <b>XML</b>,
+               os vários elementos foram transformados no formato necessário. Assim, começou-se por
+               aplicar a transformação 
+               às obras, tendo estas a indicação dos instrumentos que as compõe. Em seguida, foram
+               gerados os instrumentos, 
+               num modo de 
+               <i>parse</i> diferente do das obras.
+               
+            </p>
+            
+            
+            <p>
+               Em seguida, para testar a resolução efetuada, a ontologia foi carregada para um projeto
+               de 
+               
+               <b>GraphDB</b>, sendo que todos os registos se encontravam representados como pretendido. 
+               Aqui, foi, também, possível responder às 
+               <i>queries</i> propostas, sendo que estas se 
+               encontram num ficheiro com nome 
+               <i>queries.txt</i>. As respostas encontram-se na pasta 
+               <i>answers</i>. 
+               
+            </p>
+            
+            
+            
+            
+         </div>
+         
+         <hr></hr>
+         <h2>Deliverables</h2>
+         <ol>
+            
+            <li>
+               <a href="https://github.com/citoplasme/PRC/tree/master/TPC2">Github</a>
+            </li>
+            
+            <li>
+               <a href="https://github.com/citoplasme/PRC/blob/master/TPC2/src">Resolução</a>
+            </li>
+            
+            <li>
+               <a href="https://github.com/citoplasme/PRC/blob/master/TPC2/src/ontologia.xml">XML</a>
+            </li>
+            
+            <li>
+               <a href="https://github.com/citoplasme/PRC/blob/master/TPC2/src/ontologia.ttl">Entidades</a>
+            </li>
+            
+            <li>
+               <a href="https://github.com/citoplasme/PRC/blob/master/TPC2/src/final.ttl">TTL</a>
+            </li>
+            
+            <li>
+               <a href="https://github.com/citoplasme/PRC/blob/master/TPC2/src/infered.ttl">Após Reasoner</a>
+            </li>
+            
+            <li>
+               <a href="https://github.com/citoplasme/PRc/blob/master/TPC2/PR/pr.html">Project Record HTML</a>
+            </li>
+            
+         </ol>
+         
+      </div>
+      <hr></hr>
+      <p align="center">11/02/2020</p>
+   </body>
+</html>
