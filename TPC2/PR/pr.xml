@@ -57,10 +57,9 @@
     <deliverables>
         <deliverable path="https://github.com/citoplasme/PRC/tree/master/TPC2">Github</deliverable>
         <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC2/src">Resolução</deliverable>
-        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC2/src/ontologia.xml">XML</deliverable>
-        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC2/src/ontologia.ttl">Entidades</deliverable>
-        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC2/src/final.ttl">TTL</deliverable>
-        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC2/src/infered.ttl">Após Reasoner</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC2/src/queries.txt">Queries</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC2/answers">Respostas</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC2/src/final.ttl">Ontologia</deliverable>
         <deliverable path="https://github.com/citoplasme/PRc/blob/master/TPC2/PR/pr.html">Project Record HTML</deliverable>
     </deliverables>
 </pr>
