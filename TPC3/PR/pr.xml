@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <keyname>PRC_TPC3</keyname>
+        <title>Servidor Interface NodeJS para Execução de Queries SPARQL</title>
+        <subtitle>TP3 da UC PRC do perfil de PLC 2019/2020</subtitle>
+        <bdate>2020-02-17</bdate>
+        <edate>2020-02-23</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+            <email>jcr@di.uminho.pt</email>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>João Pedro Torres Pimentel</name>
+            <identifier>A80874</identifier>
+            <email>a80874@alunos.uminho.pt</email>
+            <photo path="me.jpeg"/>
+        </member>
+    </workteam>
+    <abstract>
+        
+        <p>
+            Este trabalho semanal baseia-se na criação de uma aplicação <i>web</i> capaz de dar 
+            respostas sobre repositórios <i>GraphDB</i>. 
+            Desta forma, pretendia-se que existisse uma forma de selecionar entre os repositórios possuídos, 
+            bem como escrever a <i>query</i> a executar. Por fim, o utilizador deveria ter a possibilidade 
+            de limpar a área de texto com as respostas obtidas.
+        </p>
+        
+        <p>
+            Tanto a área textual para a inserção da <i>query</i>, como a área dos resultados, tratam-se de 
+            <i>text areas</i>, tendo <i>placeholders</i> e ações a si associadas por um botão. No lado esquerdo 
+            do ecrã, o utilizador pode selecionar o repositório a interrogar dentro dos seus (valores carregados 
+            com a página), bem como indicar a <i>query</i> por via textual. Ao selecionar o botão de execução, 
+            é gerada uma ação com auxílio de <i>AJAX</i> para executar e alocar os dados da resposta na área respetiva.
+            Note-se que as duas áreas textuais são expansíveis, sendo que os resultados e as <i>queries</i>
+            possuem dimensões elevadas por norma. Além disso, de modo a limpar a área de respostas, existe outra 
+            ação <i>AJAX</i> associada a um botão, sendo que atribui o valor nulo ao conteúdo daquele componente.
+        </p>
+         
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/citoplasme/PRC/tree/master/TPC3">Github</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC3/graph">Servidor</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRc/blob/master/TPC3/PR/pr.html">Project Record HTML</deliverable>
+    </deliverables>
+</pr>
+
+
