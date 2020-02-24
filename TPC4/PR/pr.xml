@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <keyname>PRC_TPC4</keyname>
+        <title>Servidor Interface NodeJS para uma Ontologia Musical</title>
+        <subtitle>TP4 da UC PRC do perfil de PLC 2019/2020</subtitle>
+        <bdate>2020-02-24</bdate>
+        <edate>2020-03-01</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+            <email>jcr@di.uminho.pt</email>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>João Pedro Torres Pimentel</name>
+            <identifier>A80874</identifier>
+            <email>a80874@alunos.uminho.pt</email>
+            <photo path="me.jpeg"/>
+        </member>
+    </workteam>
+    <abstract>
+        
+        <p>
+            Este trabalho semanal baseia-se na criação de uma aplicação <i>web</i> capaz de dar 
+            respostas sobre um repositório <i>GraphDB</i>. 
+            Desta forma, pretende-se que a partir da listagem das obras na ontologia, o utilizador possa
+            aceder às partituras de uma obra em específico.
+        </p>
+        
+        <p>
+            Assim, a primeira rota deve efetuar uma <i>query</i> ao repositório, obtendo-se os dados da obra
+            (título, número de partituras e identificador). No segundo caso, tendo como base uma obra e através 
+            do identificador da mesma, devem ser apresentadas as partituras, bem como os seus atributos. Note-se
+            que estes são opcionais, pelo que esses dados devem ser tidos em conta tanto na <i>query</i>, 
+            como na apresentação dos mesmos.
+        </p>
+         
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/citoplasme/PRC/tree/master/TPC4">Github</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC4/src">Servidor</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRc/blob/master/TPC4/PR/pr.html">Project Record HTML</deliverable>
+    </deliverables>
+</pr>
+
+
