@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <keyname>PRC_TPC5</keyname>
+        <title>Interrogação SPARQL na DBPedia para Gerar um Dataset</title>
+        <subtitle>TP5 da UC PRC do perfil de PLC 2019/2020</subtitle>
+        <bdate>2020-03-02</bdate>
+        <edate>2020-03-09</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+            <email>jcr@di.uminho.pt</email>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>João Pedro Torres Pimentel</name>
+            <identifier>A80874</identifier>
+            <email>a80874@alunos.uminho.pt</email>
+            <photo path="me.jpeg"/>
+        </member>
+    </workteam>
+    <abstract>
+        
+        <p>
+            Este trabalho semanal baseia-se no desenvolvimento de uma interrogação <b>SPARQL</b> sobre a 
+            <b>DBPedia</b>, de modo a gerar um <i>dataset</i> sobre nadadores. Este deve permitir informação 
+            incompleta, ou seja, registos sem todos os campos preenchidos. Os campos pretendidos a apresentar
+            no <i>dataset</i> são: 
+            <i>foaf:name</i>, 
+            <i>foaf:gender</i>,
+            <i>dbo:birthDate</i>,
+            <i>dbo:birthPlace</i> <b>(Opcional)</b>,
+            <i>dbo:deathDate</i> <b>(Opcional)</b> e
+            <i>dbo:abstract@en</i> <b>(Opcional)</b>.
+        </p>
+        
+        
+         
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/citoplasme/PRC/tree/master/TPC5">Github</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC5/src/query.txt">Query</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC5/src/dataset.json">Dataset</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRc/blob/master/TPC5/PR/pr.html">Project Record HTML</deliverable>
+    </deliverables>
+</pr>
+
+
