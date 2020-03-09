@@ -1,0 +1,32 @@
+Quem vende o A?
+
+PREFIX : <http://joaopimentel/ontologies/2020/2/lojas#>
+select ?loja where {
+    :p1 a :Produto .
+    ?l a :Loja .
+    ?l :vende :p1 .
+    ?l :nome ?loja .
+}
+
+
+Que compra o X?
+
+PREFIX : <http://joaopimentel/ontologies/2020/2/lojas#>
+select ?cliente where {
+    :p2 a :Produto .
+    ?c a :Cliente .
+    ?c :compra :p2 .
+    ?c :nome ?cliente .
+}
+
+
+Potenciais clientes da loja Y? _> Quem compra o que a loja vende
+
+PREFIX : <http://joaopimentel/ontologies/2020/2/lojas#>
+select distinct ?cliente where {
+    :pingoDoce a :Loja .
+    :pingoDoce :vende ?p .
+    ?c :compra ?p .
+    ?c a :Cliente .
+    ?c :nome ?cliente .
+}

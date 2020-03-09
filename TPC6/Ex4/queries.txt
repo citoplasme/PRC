@@ -1,0 +1,79 @@
+Obtem uma lista de todos os pokemons catalogadas com os seguintes atributos: número, nome em inglês e tipo;
+
+PREFIX : <http://www.chalkos.net/ontologies/2015/pokemon#>
+PREFIX pokemon: <http://www.chalkos.net/ontologies/2015/pokemon#>
+select ?numero ?nome (group_concat(distinct ?tipo; separator=", ") as ?tipos) where {
+    ?pokemon a pokemon:Pokemon .
+    ?pokemon pokemon:Name ?nome . 
+    filter(lang(?nome) = 'en')
+    ?pokemon pokemon:HasType ?tp .
+    ?tp pokemon:Name ?tipo .
+    ?pokemon pokemon:Number ?numero .
+    filter(lang(?tipo) = 'en')
+} group by ?numero ?nome 
+
+Quantos pokémons estão catalogadas na ontologia?
+
+PREFIX : <http://www.chalkos.net/ontologies/2015/pokemon#>
+PREFIX pokemon: <http://www.chalkos.net/ontologies/2015/pokemon#>
+select (count(distinct ?nome) as ?pokemons) where {
+    ?pokemon a pokemon:Pokemon .
+    ?pokemon pokemon:Name ?nome . 
+    filter(lang(?nome) = 'en')
+} 
+
+Quantas evoluções tem o pokémon com número 5?
+
+PREFIX : <http://www.chalkos.net/ontologies/2015/pokemon#>
+PREFIX pokemon: <http://www.chalkos.net/ontologies/2015/pokemon#>
+select (count(*) as ?evos) where {
+    {	
+    	?charmeleon a pokemon:Pokemon .
+    	?charmeleon pokemon:Number 5 .
+    	?charmeleon pokemon:EvolvesFrom ?evo2 . 
+    	?evo2 pokemon:EvolvesTo ?charizard .
+    }
+ union {
+        ?charmander a pokemon:Pokemon .
+        ?charmander pokemon:EvolvesFrom ?evo1 . 
+        ?evo1 pokemon:EvolvesTo ?charmeleon .
+        ?charmeleon pokemon:Number 5 .
+	}
+}
+
+Quais são os pokémons para os quais pode evoluir o pokémon de nome "Eevee"?
+
+PREFIX : <http://www.chalkos.net/ontologies/2015/pokemon#>
+PREFIX pokemon: <http://www.chalkos.net/ontologies/2015/pokemon#>
+select ?tipo where {
+    ?eevee a pokemon:Pokemon .
+    ?eevee pokemon:Name "Eevee"@en .
+    ?eevee pokemon:EvolvesFrom ?evo . 
+    ?evo pokemon:EvolvesTo ?evolution .
+    ?evolution a pokemon:Pokemon .
+    ?evolution pokemon:HasType ?tp .
+    ?tp pokemon:Name ?tipo .
+    filter(lang(?tipo) = 'en') 
+}
+
+Quantos tipos diferentes de pokémons exitem na ontologia?
+
+PREFIX : <http://www.chalkos.net/ontologies/2015/pokemon#>
+PREFIX pokemon: <http://www.chalkos.net/ontologies/2015/pokemon#>
+select (count(distinct ?tipo) as ?tipos) where {
+    ?pokemon a pokemon:Pokemon .
+    ?pokemon pokemon:HasType ?tp .
+    ?tp pokemon:Name ?tipo .
+    filter(lang(?tipo) = 'en') 
+}
+
+Quantos pokémons existem associados a cada tipo?
+
+PREFIX : <http://www.chalkos.net/ontologies/2015/pokemon#>
+PREFIX pokemon: <http://www.chalkos.net/ontologies/2015/pokemon#>
+select distinct ?tipo (count(?pokemon) as ?pokemons) where {
+    ?pokemon a pokemon:Pokemon .
+    ?pokemon pokemon:HasType ?tp .
+    ?tp pokemon:Name ?tipo .
+    filter(lang(?tipo) = 'en') .
+} group by ?tipo

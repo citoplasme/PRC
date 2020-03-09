@@ -1,0 +1,23 @@
+Cliente
+	- nome 
+	- email
+
+Loja 
+	- nome 
+	- email
+
+LojaGrande -> mais de 100 produtos vendidos
+Produto nao pode ser cliente
+Loja e Cliente sao CompraVenda
+
+Produto
+	- codigo
+
+
+Loja vende Produto 		éVendidoPor
+Cliente compra Produto 	éCompradoPor
+
+
+5 lojas
+5 clientes
+10 produtos
