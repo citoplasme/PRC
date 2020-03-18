@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <keyname>PRC_TPC7</keyname>
+        <title>Ontologia sobre o Mundo do Cinema</title>
+        <subtitle>TP7 da UC PRC do perfil de PLC 2019/2020</subtitle>
+        <bdate>2020-03-16</bdate>
+        <edate>2020-03-2</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+            <email>jcr@di.uminho.pt</email>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>João Pedro Torres Pimentel</name>
+            <identifier>A80874</identifier>
+            <email>a80874@alunos.uminho.pt</email>
+            <photo path="me.jpeg"/>
+        </member>
+    </workteam>
+    <abstract>
+        
+        <p>
+            Este trabalho semanal baseia-se na execução de interrogações <b>SPARQL</b> para povoar uma ontologia sobre o mundo do cinema.
+        </p>
+        <p>
+        	O primeiro passo foi a execução das interrogações, com consequente <i>parsing</i> do conteúdo das mesmas, formando-se vários <i>datasets</i>, um para cada classe da ontologia. Após a obtenção destes conjuntos de dados, a ideia passou por converter, um a um, os registos para o formato ontológico. Para isto, teve-se como base os indivíduos criados durante a última aula.
+        </p>
+        <p>
+        	Assim, foram gerados 3 ficheiros <i>turtle</i>, sendo estes referentes a <i>output</i>, que depois seriam fundidos com as declarações iniciais para finalizar a ontologia. Note-se que devido à irregularidade dos dados vindos da <i>DBPedia</i>, existem registos com identificadores duplicados. Além disso, devido à definição inicial da ontologia, dados como os escritores e músicos não foram utilizados por faltarem dados de obras. Também é de destacar que não foram associados os atores aos respetivos filmes, mas bastaria encontrar uma interrogação na <i>DBPedia</i> para relacionar filmes com atores.  
+        </p>
+        
+        
+         
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/citoplasme/PRC/tree/master/TPC7">Github</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC7/PR/pr.html">Project Record HTML</deliverable>
+    </deliverables>
+</pr>
+
+
