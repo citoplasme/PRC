@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <keyname>PRC_TPC8</keyname>
+        <title>API de Dados para Ontologia o Mundo do Cinema</title>
+        <subtitle>TP8 da UC PRC do perfil de PLC 2019/2020</subtitle>
+        <bdate>2020-03-23</bdate>
+        <edate>2020-03-29</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+            <email>jcr@di.uminho.pt</email>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>João Pedro Torres Pimentel</name>
+            <identifier>A80874</identifier>
+            <email>a80874@alunos.uminho.pt</email>
+            <photo path="me.jpeg"/>
+        </member>
+    </workteam>
+    <abstract>
+        
+        <p>
+            Este trabalho semanal baseia-se na implementação de uma <b>API</b> de dados sobre uma ontologia sobre o mundo do cinema.
+        </p>
+        <p>
+        	Foi definido que existiriam três grandes entidades a analisar: filmes, atores e personagens. Assim, cada um pode ser acedido através da rota <i>/api/{entidade}</i>. Todos os casos permitem uma listagem inicial em que se mostram alguns atributos e uma listagem de um único registo, através do seu identificador.
+        </p>
+        <p>
+        	Tendo em conta a existência de campos que os registos podem ou não possuir, foi necessário indicar os mesmos como opcionais. Além disso, no que toca aos <i>gets</i> da informação de produtores, personagens, géneros e realizadores, foram definidos como métodos distintos, sendo chamadados aquando do pedido de <i>GET</i> para um determinado identificador de filme, sendo posteriormente adicionados ao objeto já existente. 
+        </p>
+         
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/citoplasme/PRC/tree/master/TPC8">Github</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/tree/master/TPC8/API">API de Dados</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC8/PR/pr.html">Project Record HTML</deliverable>
+    </deliverables>
+</pr>
+
+

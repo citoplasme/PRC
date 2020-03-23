@@ -1,0 +1,88 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>
+                    Project Record
+                </title>
+<meta charset="UTF-8">
+<style>
+                    * {
+                        font-family: Lucida Grande;
+                    }
+                    
+                    div {
+                        box-sizing: border-box;
+                        text-align: justify;
+                        text-justify: inter-word;
+                    }
+                    
+                    .column {
+                        float: left;
+                        width: 33.33%;
+                        padding: 5px;
+                    }
+                    
+                    .row::after {
+                        content: "";
+                        clear: both;
+                        display: table;
+                    }
+                    
+                </style>
+</head>
+<body>
+<div style="margin:2cm">
+    
+        <p align="left">PRC_TPC8<span style="float:right;">
+                Universidade do Minho
+            </span></p>
+        <h1 align="center">API de Dados para Ontologia o Mundo do Cinema</h1>
+        <h3 align="center">TP8 da UC PRC do perfil de PLC 2019/2020</h3>
+        <h5 align="center"> Begin Date: 
+            2020-03-23</h5>
+        <h5 align="center"> End Date: 
+            2020-03-29</h5>
+        <hr>
+<h2><b>Supervisor</b></h2>
+            <p><b>Name: </b>José Carlos Ramalho</p>
+            <p><b>Homepage:</b><a href="http://www4.di.uminho.pt/~jcr/">http://www4.di.uminho.pt/~jcr/</a></p>
+            <p><b>Email: </b><a href="mailto:jcr@di.uminho.pt">jcr@di.uminho.pt</a></p>
+        
+    
+    <hr>
+<h2>Workteam</h2>
+<div class="row">
+        <div class="column">
+            <p><b>Name: </b>João Pedro Torres Pimentel</p>
+            <p><b>Identifier: </b>A80874</p>
+            <p><b>Email: </b><a href="mailto:a80874@alunos.uminho.pt">a80874@alunos.uminho.pt</a></p>
+            <img src="me.jpeg" alt="me.jpeg" width="250">
+        </div>
+    </div>
+    <hr>
+<h2>Abstract</h2>
+<div>
+        
+        <p>
+            Este trabalho semanal baseia-se na implementação de uma <b>API</b> de dados sobre uma ontologia sobre o mundo do cinema.
+        </p>
+        <p>
+        	Foi definido que existiriam três grandes entidades a analisar: filmes, atores e personagens. Assim, cada um pode ser acedido através da rota <i>/api/{entidade}</i>. Todos os casos permitem uma listagem inicial em que se mostram alguns atributos e uma listagem de um único registo, através do seu identificador.
+        </p>
+        <p>
+        	Tendo em conta a existência de campos que os registos podem ou não possuir, foi necessário indicar os mesmos como opcionais. Além disso, no que toca aos <i>gets</i> da informação de produtores, personagens, géneros e realizadores, foram definidos como métodos distintos, sendo chamadados aquando do pedido de <i>GET</i> para um determinado identificador de filme, sendo posteriormente adicionados ao objeto já existente. 
+        </p>
+         
+    </div>
+    <hr>
+<h2>Deliverables</h2>
+<ol>
+        <li><a href="https://github.com/citoplasme/PRC/tree/master/TPC8">Github</a></li>
+        <li><a href="https://github.com/citoplasme/PRC/tree/master/TPC8/API">API de Dados</a></li>
+        <li><a href="https://github.com/citoplasme/PRC/blob/master/TPC8/PR/pr.html">Project Record HTML</a></li>
+    </ol>
+</div>
+<hr>
+<p align="center"></p>
+<p align="center">23/03/2020</p></body>
+</html>
