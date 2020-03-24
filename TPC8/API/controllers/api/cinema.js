@@ -36,44 +36,44 @@ Movies.findOne = async (id) => {
 }
 // produtores, realizadores, generos, personagens
 Movies.getProducers = async (id) => {
-	const query = `select (group_concat(distinct ?prod; separator=",") as ?produtores) where {
+	const query = `select ?prod where {
         cinema:${id} rdf:type cinema:Filme .
         cinema:${id} cinema:foiProduzido ?p .
         ?p cinema:nome ?prod . 
     }`
     
 	const response = await execQuery('query', query)
-    return normalize(response)[0]
+    return normalize(response)
 }
 
 Movies.getRealizadores = async (id) => {
-	const query = `select (group_concat(distinct ?realizador; separator=",") as ?realizadores) where {
+	const query = `select ?realizador where {
         cinema:${id} rdf:type cinema:Filme .
         cinema:${id} cinema:temRealizador ?p .
         ?p cinema:nome ?realizador . 
     }`
 	const response = await execQuery('query', query)
-    return normalize(response)[0]
+    return normalize(response)
 }
 
 Movies.getGeneros = async (id) => {
-	const query = `select (group_concat(distinct ?genero; separator=",") as ?generos) where {
+	const query = `select ?genero where {
         cinema:${id} rdf:type cinema:Filme .
         cinema:${id} cinema:temGénero ?p .
         ?p cinema:nome ?genero . 
     }`
 	const response = await execQuery('query', query)
-    return normalize(response)[0]
+    return normalize(response)
 }
 
 Movies.getPersonagens = async (id) => {
-	const query = `select (group_concat(distinct ?personagem; separator=",") as ?personagens) where {
+	const query = `select ?personagem where {
         cinema:${id} rdf:type cinema:Filme .
         cinema:${id} cinema:temPersonagem ?p .
         ?p cinema:nome ?personagem . 
     }`
 	const response = await execQuery('query', query)
-    return normalize(response)[0]
+    return normalize(response)
 }
 
 Movies.listarPersonagens = (filtro) => {

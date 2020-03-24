@@ -13,11 +13,10 @@ router.get('/', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => {
 	try{
         var filme = await Movies.findOne(req.params.id);
-        var produtores = await Movies.getProducers(req.params.id);
-        var generos = await Movies.getGeneros(req.params.id);
-        var personagens = await Movies.getPersonagens(req.params.id);
-        var realizadores = await Movies.getRealizadores(req.params.id);
-        filme = {...filme, ...produtores, ...generos, ...personagens, ...realizadores};
+        filme.produtores = await Movies.getProducers(req.params.id);
+        filme.generos = await Movies.getGeneros(req.params.id);
+        filme.personagens = await Movies.getPersonagens(req.params.id);
+        filme.realizadores = await Movies.getRealizadores(req.params.id);
         res.jsonp(filme)
     } catch(erro){
         res.status(500).send(`Erro na apresentação do filme: ${erro}`)
