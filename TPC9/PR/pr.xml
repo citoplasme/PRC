@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <keyname>PRC_TPC9</keyname>
+        <title>API de Dados e Interface Reativa para Ontologia o Mundo do Cinema</title>
+        <subtitle>TP9 da UC PRC do perfil de PLC 2019/2020</subtitle>
+        <bdate>2020-04-20</bdate>
+        <edate>2020-04-26</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+            <email>jcr@di.uminho.pt</email>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>João Pedro Torres Pimentel</name>
+            <identifier>A80874</identifier>
+            <email>a80874@alunos.uminho.pt</email>
+            <photo path="me.jpeg"/>
+        </member>
+    </workteam>
+    <abstract>
+        
+        <p>
+            Este trabalho semanal baseia-se na implementação de controladores numa <b>API</b> de dados sobre uma ontologia sobre o mundo do cinema, tendo esta uma ligação a uma interface reativa em <i>VueJS</i>.
+        </p>
+        <p>
+        	Foi definido que seria necessário implementar 6 novas rotas, sendo estas associadas a 3 entidades. Assim, era pretendido implementar rotas de listagem geral e rotas para apresentação de informação individual, por cada entidade.
+        </p>
+        <p>
+        	Desta forma, a ideia passou por analisar as relações existentes na ontologia, de modo a obter os dados pretendidos. Sendo assim, a página de um ator individual apresneta o seu nome e género, bem como as personagens que representou e filmes em que participou. As personagens apresentam a informação dos atores que as representaram e os filmes em que apareceram, além da sua informação pessoal. Por fim, os géneros, aliado à sua designação, apresentam a listagem dos filmes que possuem o género em questão.
+        </p>
+         
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/citoplasme/PRC/tree/master/TPC9">Github</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/tree/master/TPC9/src">Código Fonte</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC9/PR/pr.html">Project Record HTML</deliverable>
+    </deliverables>
+</pr>
+
+
