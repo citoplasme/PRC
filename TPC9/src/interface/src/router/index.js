@@ -18,6 +18,16 @@ Vue.use(VueRouter)
     path: '/filmes/:id',
     name: 'Consulta Filme',
     component: () => import('../views/Consulta.vue')
+  },
+  {
+    path: '/atores',
+    name: 'Página Principal Atores',
+    component: () => import('../views/Atores.vue')
+  },
+  {
+    path: '/atores/:id',
+    name: 'Consulta Ator',
+    component: () => import('../views/ConsultaAtor.vue')
   }
 ]
 
