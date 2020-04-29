@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <keyname>PRC_TPC10</keyname>
+        <title>Queries SPARQL sobre uma Ontologia Geneológica</title>
+        <subtitle>TP10 da UC PRC do perfil de PLC 2019/2020</subtitle>
+        <bdate>2020-04-27</bdate>
+        <edate>2020-05-03</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+            <email>jcr@di.uminho.pt</email>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>João Pedro Torres Pimentel</name>
+            <identifier>A80874</identifier>
+            <email>a80874@alunos.uminho.pt</email>
+            <photo path="me.jpeg"/>
+        </member>
+    </workteam>
+    <abstract>
+        
+        <p>
+            Este trabalho semanal baseia-se no desenvolvimento de <i>queries SPARQL</i> para obtenção de dados numa ontologia geneológica. Assim, era pretendido que fossem calculadas relações entre primos, tios e sobrinhos, ancestrais com descendentes, sogros e, por fim, cunhados.
+        </p>
+        <p>
+        	No que toca ao cálculo dos tios e tias, foi efetuada uma diferenciação do nome da relação com base no género. Nos restantes casos esta diferenciação não foi efetuada, sendo utilizados nomes não restritivos ao género para as relações.
+        </p>
+        <p>
+        	Desta forma, a ideia passou por utilizar métodos de <i>construct</i>, sendo chamadas uniões de <i>queries</i> quando necessário.
+        </p>
+         
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/citoplasme/PRC/tree/master/TPC10">Github</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/tree/master/TPC10/src/queries.sparql">Queries</deliverable>
+        <deliverable path="https://github.com/citoplasme/PRC/blob/master/TPC10/PR/pr.html">Project Record HTML</deliverable>
+    </deliverables>
+</pr>
+
+

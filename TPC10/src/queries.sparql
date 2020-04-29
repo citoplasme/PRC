@@ -1,0 +1,77 @@
+# Tios
+construct {
+    ?nephew :hasUncle ?p .
+} where {
+    {
+    	?p a :Person .
+        ?p :sex "M" .
+    	?p :hasSibling/:hasSon ?nephew .
+	} union {
+		?p :hasSibling/:hasDaughter ?nephew .
+    }
+}
+
+# Tias
+construct {
+    ?nephew :hasAunt ?p .
+} where {
+    {
+    	?p a :Person .
+        ?p :sex "F" .
+    	?p :hasSibling/:hasSon ?nephew .
+	} union {
+		?p :hasSibling/:hasDaughter ?nephew .
+    }
+}
+
+# Primos
+construct {
+    ?child :hasCousin ?cousin .
+} where {
+    ?p a :Person .
+    ?p :hasChild ?child .
+    ?p :hasSibling/:hasChild ?cousin .
+    filter(?child != ?cousin) .
+}
+
+# Ancestrais
+construct {
+    ?person :hasAncestor ?ancestor .
+} where {
+    ?person a :Person .
+    ?person :hasParent+ ?ancestor .
+}
+
+# Descendestes
+construct {
+    ?person :hasDescendent ?descendent .
+} where {
+    ?person a :Person .
+    ?person :hasChild+ ?descendent .
+}
+
+# Sogros
+construct {
+    ?person :hasParentInLaw ?parents2 .
+    ?person2 :hasParentInLaw ?parents1 .
+} where {
+    ?person a :Person .
+    ?person :hasChild ?child .
+    ?child :hasParent ?person2 .
+    filter(?person != ?person2) . # Father != Mother
+    ?person :hasParent ?parents1 .
+    ?person2 :hasParent ?parents2 .
+}
+
+# Cunhados
+construct {
+    ?person :hasSiblingInLaw ?siblings2 .
+    ?person2 :hasSiblingInLaw ?siblings1 .
+} where {
+    ?person a :Person .
+    ?person :hasChild ?child .
+    ?child :hasParent ?person2 .
+    filter(?person != ?person2) . # Father != Mother
+    ?person :hasSibling ?siblings1 .
+    ?person2 :hasSibling ?siblings2 .
+}
