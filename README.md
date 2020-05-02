@@ -10,3 +10,4 @@ __TPC6__ - Resolução de um teste sobre Ontologias
 __TPC7__ - Parsing da DBPedia para uma Ontologia Cinemática  
 __TPC8__ - API de Dados para uma Ontologia Cinemática  
 __TPC9__ - API de Dados e Interface Reativa para uma Ontologia Cinemática  
+__TPC10__ - Queries SPARQL sobre uma Ontologia Geneológica  
